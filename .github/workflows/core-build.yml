@@ -28,7 +28,7 @@ jobs:
       - name: Cache
         uses: actions/cache@v2
         with:
-          path: /home/runner/.ccache
+          path: var/ccache
           key: ccache:${{ matrix.compiler }}:${{ github.ref }}:${{ github.sha }}
           restore-keys: |
             ccache:${{ matrix.compiler }}:${{ github.ref }}
