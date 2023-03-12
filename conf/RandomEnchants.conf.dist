@@ -40,3 +40,7 @@ RandomEnchants.OnCreate=1
 
 RandomEnchants.OnQuestReward=1
 
+# Rate of chance of enchanting
+RandomEnchants.Rate1=1
+RandomEnchants.Rate2=1
+RandomEnchants.Rate3=1
