@@ -44,17 +44,17 @@ public:
 
 		int slotRand[3] = { -1, -1, -1 };
 		uint32 slotEnch[3] = { 0, 1, 5 };
-		double roll1 = rand_chance();
+		double roll1 = rand_chance() * sConfigMgr->GetOption<float>("RandomEnchants.Rate1", 1.0);
 		if (roll1 >= 70.0)
 			slotRand[0] = getRandEnchantment(item);
 		if (slotRand[0] != -1)
 		{
-			double roll2 = rand_chance();
+			double roll2 = rand_chance() * sConfigMgr->GetOption<float>("RandomEnchants.Rate2", 1.0);
 			if (roll2 >= 65.0)
 				slotRand[1] = getRandEnchantment(item);
 			if (slotRand[1] != -1)
 			{
-				double roll3 = rand_chance();
+				double roll3 = rand_chance() * sConfigMgr->GetOption<float>("RandomEnchants.Rate3", 1.0);
 				if (roll3 >= 60.0)
 					slotRand[2] = getRandEnchantment(item);
 			}
